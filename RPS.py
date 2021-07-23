@@ -14,6 +14,7 @@ def user_message():
     1_stone :\t"st"
     2_paper :\t"pa"
     3_scissor :\t"sc"
+    4_exit:\t"e"
         """
     )
     userinput = input("Your choice :\t")
@@ -36,6 +37,8 @@ options = {
 def main():
     pc = pc_choice()
     user = user_message()
+    if user == "e":
+        exit()
     print("My choice was :\t", pc)
     result = pc + user
     final = options.get(result, 2)
